@@ -46,9 +46,614 @@ body
 	overflow-x: hidden
 	opacity: 1
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+
+/** ====== Section Header styles ====== **/
+.header
+	font-family: "Pragmatica Oblique", sans-serif
+	.logo
+		margin-top: 43px
+		margin-left: -40px
+	nav .col-lg-11
+		padding: 0
+		margin: 0
+	nav ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			display: inline-block
+			text-decoration: none
+			margin: 0 40px
+			color: #221f1f
+			font-size: 14px
+			font-weight: 300
+			line-height: 24.64px
+			letter-spacing: 0.7px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: -40px
+			&:nth-child(1)
+				margin-top: 20px
+				margin-right: 30px
+				margin-left: 15px
+				width: 61px
+				height: 61px
+				background-color: #e3e3e4
+				border-radius: 50%
+				text-align: center
+				line-height: 61px
+				color: #231f20
+				font-size: 24px
+				font-weight: 800
+			&:nth-child(2):before
+				background: url("../img/bus.png") center no-repeat
+				width: 19px
+				height: 20px
+			&:nth-child(3):before
+				background: url("../img/devices.png") center no-repeat
+				width: 16px
+				height: 20px
+			&:nth-child(4):before
+				background: url("../img/floors.png") center no-repeat
+				width: 23px
+				height: 21px
+			&:nth-child(5)
+				margin-right: 0
+				&:before
+					background: url("../img/territory.png") center no-repeat
+					width: 17px
+					height: 20px
+			&:nth-child(7)
+				background: url("../img/letter.jpg") center no-repeat
+				width: 23px
+				height: 16px
+				z-index: 3
+				position: relative
+				top: 3px
+				margin-right: 0
+				margin-left: 20px
+				&:after
+					content: attr(data-message)
+					position: absolute
+					top: -7px
+					right: -8px
+					width: 15px
+					height: 15px
+					background-color: #ee2d24
+					font-size: 8px
+					color: white
+					line-height: 15px
+					border-radius: 50%
+					text-align: center
+					transition: all .5s ease
+				&:hover
+					cursor: pointer
+					box-shadow: 0 0 10px rgba(0,0,0, .5)
+			&:nth-child(8)
+				margin-right: 0
+
+.header ul li a
+	color: #221f1f
+	text-decoration: none
+	transition: all .5s ease
+	&:hover
+	 color: #FDDA9D
+
+.header .search.active 
+	input[type="search"]
+		width: 145px
+		border-color: #333
+		transition: width .5s ease, border-color .7s
+.header .search
+	position: relative
+	width: 55px
+	z-index: 10
+	button[type="submit"]
+		width: 16px
+		height: 16px
+		display: block
+		border: none
+		outline: none
+		background-color: transparent
+		background: url("../img/search.png") center no-repeat
+		position: absolute
+		margin-top: 7px
+		margin-left: 7px
+		transition: width .5s ease, border-color .5s
+	input[type="search"]
+		width: 55px
+		height: auto
+		padding-left: 40px
+		border: 2px solid transparent
+		border-radius: 10px
+		outline: none
+		z-index: 10
+		transition: width .5s ease
+
+.header .profile
+	background: #fdd	a9d
+	position: relative
+	width: 142px
+	height: 41px
+	border-radius: 20px
+	top: 15px
+	&:before
+		content: ''
+		background: url("../img/user.jpg") center no-repeat
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		display: block
+		position: absolute
+		top: 6px
+		left: 6px
+	&:after
+		content: attr(data-user-name)
+		float: right
+		margin-right: 16px
+		margin-top: 8px
+		color: #231f20
+		font-size: 14px
+		font-family: "Pragmatica Light", sans-serif
+		font-weight: 300
+
+
+/** ====== Section Navigation styles ====== **/
+.navigation
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			display: inline-block
+			margin: 30px 26px
+			&:first-child
+				margin-left: 43px
+			&:last-child
+				margin-right: 0
+		a 
+			color: #1f1f1f
+			font-size: 12px
+			font-weight: bold
+			line-height: 14.4px
+			letter-spacing: 0.6px
+			text-decoration: none
+			outline: none
+			text-transform: uppercase
+			position: relative
+			&:before
+				content: ''
+				width: 100%
+				height: 2px
+				background: #f04239
+				position: absolute
+				top: 20px
+				left: 0
+				opacity: 0
+				transition: all .5s ease
+			&:hover:before
+				opacity: 1
+				top: 37px
+		a.active
+			color: #f04239
+			&:before
+				opacity: 1
+				top: 37px
+			
+
+/** ====== Section News styles ====== **/
+.news
+	.live-chanel
+		max-width: 380px
+		padding-top: 30px
+		padding-left: 40px
+		height: auto
+		display: block
+		margin: 0 auto
+		&__title
+			margin-top: 10px
+			color: #818285
+			font-size: 14px
+			font-weight: 400
+			font-family: "Pragmatica Book", sans-serif
+			text-transform: uppercase
+		&__desc
+			margin-top: 10px
+			color: #231f20
+			font-family: "Pragmatica Black", sans-serif
+			font-size: 16px
+			line-height: 20px
+			font-weight: 700
+		&__link
+			margin-right: 18px	
+			float: left
+			position: relative
+			&:hover:before
+				color: #EE2D24
+			&:before
+				content: "\f16a"
+				font-family: "FontAwesome"
+				position: absolute
+				font-size: 35px
+				left: calc(50% - 17px)
+				top: calc(50% - 31px)
+				color: white
+				transition: all .5s ease
+
+	.sidebar
+		font-family: "Pragmatica Book", sans-serif
+		position: relative
+		top: -90px
+		ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li a
+				text-decoration: none
+				outline: none
+				transition: border .5s ease
+				border-bottom: 1px solid transparent
+				&:hover
+					border-bottom: 1px solid #5C5859
+			li
+				margin-top: 46px
+				position: relative
+				line-height: 20px
+				&:first-child
+					margin-top: 0
+				&:nth-child(1):after
+					content: ''
+					background: url("../img/user-2.jpg") center no-repeat
+					width: 50px
+					height: 50px
+					position: absolute
+					top: -14px
+					left: -69px	
+				&:nth-child(2)
+					a
+						color: #ee2d24
+						font-size: 14px
+						line-height: 10px
+						font-weight: 300
+						&:before
+							content: attr(data-title)
+							display: block
+							color: #5C5859
+							font-size: 12px
+							margin-bottom: 15px
+							position: relative
+							top: 6px
+					&:after
+						content: ''
+						background: url("../img/warning.jpg") center no-repeat
+						width: 30px
+						height: 31px
+						position: absolute
+						left: -60px
+						top: -5px
+				&:nth-child(3)
+					a
+						color: #1f1f1f
+						font-size: 13px
+						line-height: 10px
+						font-weight: 300
+						&:before
+							content: attr(data-title)
+							display: block
+							color: #5C5859
+							font-size: 12px
+							margin-bottom: 15px
+							position: relative
+							top: 6px
+					&:after
+						content: ''
+						background: url("../img/file.jpg") center no-repeat
+						width: 24px
+						height: 31px
+						position: absolute
+						left: -60px
+						top: -5px
+			.profile
+				color: #7f8085
+				font-size: 12px
+				font-weight: 300
+				position: relative
+				&:before
+					content: attr(data-title)
+					display: block
+					color: #1f1f1f
+					font-size: 13px
+					position: relative
+					top: 6px
+	.about-me
+		font-family: "Pragmatica Black", sans-serif
+		&__title
+			color: #221f1f
+			font-size: 26px
+			font-weight: 300
+			line-height: 31.2px
+			margin-top: 26px
+		&__desc
+			width: 468px
+			height: auto
+			color: #1f1f1f
+			font-family: "Pragmatica Book", sans-serif
+			font-size: 14px
+			font-weight: 400
+			line-height: 22.4px
+		&__position
+			color: #7f8085
+			font-size: 12px
+			font-weight: 300
+			line-height: 14.4px
+
+
+/** ====== Section Clients styles ====== **/
+.clients
+	padding-top: 25px
+	background: white
+	&__slider
+		// border: 1px solid #EBEBEB
+		position: relative
+		.slider__item
+			outline: none
+			margin: 0 10px
+			position: relative
+			min-height: 250px
+			img
+				margin: 0 auto
+		.slick-next, .slick-prev
+			position: absolute
+			top: -72px
+			width: 13px
+			height: 25px
+			border-radius: 10px
+			padding: 20px
+			transition: all .4s ease
+			&:hover
+				box-shadow: 0 0 10px rgba(0,0,0, .4)
+			&:before
+				display: none
+		.slick-next
+			background: url("../img/next.jpg") center no-repeat
+			right: 23.2%
+		.slick-prev
+			background: url("../img/prev.jpg") center no-repeat
+			left: 65.2%
+		.slick-dots
+			width: 200px
+			height: 50px
+			right: 0
+			position: absolute
+			top: -74px
+			li.slick-active
+				background: #FDDA9D
+			li
+				width: 12px
+				height: 12px
+				float: right
+				background: #e3e3e4
+				border-radius: 50%
+				margin: 0 8px
+				button
+					display: none
+		.square
+			position: absolute
+			top: 115px
+			left: 10px
+			width: 61px
+			height: 61px
+			// background-color: #fcb53b
+			&:before
+				content: attr(data-square-name)
+				color: white
+				font-family: "Pragmatica Black", sans-serif
+				font-size: 14px
+				text-transform: uppercase
+				font-weight: bold
+				line-height: 85px
+				margin-left: 5px
+		.desc 
+			width: 165px
+			height: auto
+			color: #221f1f
+			font-family: "Pragmatica Book", sans-serif
+			font-size: 13px
+			font-weight: 400
+			line-height: 18.2px
+			margin: 26px 0 35px 10px
+			position: relative
+			&:before
+				content: attr(data-date)
+				color: #7f8085
+				font-size: 12px
+				position: absolute
+				bottom: -30px
+
+
+/** ====== Section Btn Block styles ====== **/
+.btn-block
+	text-align: center
+	.btn
+		width: 152px
+		height: 41px
+		display: inline-block
+		margin: 0px 10px 20px
+		border-radius: 20px
+		background: #fdda9d
+		color: #231f20
+		text-align: center
+		padding-left: 20px
+		box-sizing: border-box
+		font-family: "Pragmatica Black", sans-serif
+		font-size: 10px
+		text-transform: uppercase
+		font-weight: bold
+		line-height: 41px
+		letter-spacing: 0.5px
+		text-decoration: none
+		outline: none
+		transition: all .35s ease
+		&:hover
+			background: #FDCE7C
+			box-shadow: 0 0 40px rgba(253, 206, 124, .9)
+	.news
+		position: relative
+		&:before
+			content: ''
+			background: url("../img/book.png") no-repeat
+			width: 26px
+			height: 20px
+			position: absolute
+			top: 9px
+			left: 10px
+	.map
+		position: relative
+		padding-left: 15px
+		&:before
+			content: ''
+			background: url("../img/map.png") no-repeat
+			width: 14px
+			height: 20px
+			position: absolute
+			top: 9px
+			left: 19px
+
+
+/** ====== Section Footer styles ====== **/
+footer
+	border-top: 1px solid #e3e3e4
+	padding-top: 56px
+	padding-bottom: 36px
+	font-family: "Pragmatica Black", sans-serif
+	.logo
+		height: 16px
+	.wishes
+		color: #7f8085
+		font-size: 12px
+		font-weight: 300
+		line-height: 19.2px
+		margin-top: 25px
+	.hot-line
+		color: #ee2d24
+		font-size: 14px
+		font-weight: 700
+		line-height: 12.6px
+	.tel
+		color: #818285
+		font-family: "Pragmatica Book", sans-serif
+		font-size: 12px
+		font-weight: 400
+		line-height: 14.4px
+		margin-top: 21px
+		position: relative
+		&:before
+			content: attr(data-number)
+			display: block
+			color: #211f1f
+			font-size: 12px
+			font-family: "Pragmatica Book", sans-serif
+			font-weight: bold
+			line-height: 14.4px
+			position: relative
+			top: -5px
+	.email
+		color: #ee2d24
+		font-size: 12px
+		font-weight: 700
+		line-height: 40px
+		outline: none
+		text-decoration: none
+		margin-top: 20px
+	.hot-btn
+		width: 215px
+		height: 41px
+		background: #fdda9d
+		color: #1f1f1f
+		border: none
+		border-radius: 20px
+		font-size: 10px
+		text-transform: uppercase
+		font-weight: bold
+		line-height: 41px
+		letter-spacing: 0.5px
+		margin-top: 4px
+		transition: all .35s ease
+		&:hover
+			background: #FDCE7C
+			box-shadow: 0 0 40px rgba(253, 206, 124, .9)
+	.exchange
+		color: #231f20
+		font-size: 14px
+		font-weight: 700
+		line-height: 12.6px
+	.date
+		color: #7f7f85
+		font-size: 12px
+		line-height: 28px
+		padding-bottom: 10px
+		border-bottom: 1px solid #d7d7d9
+	.course
+		border-bottom: 1px solid #d7d7d9
+		min-height: 80px
+	.course .item-1
+		width: 140px
+		margin-right: 3px
+	.course .item-2 span
+		color: #7f8085
+	.course div
+		// border-bottom: 1px solid #d7d7d9
+		padding: 16px 0
+		float: left
+		span
+			color: #211f1f
+			font-size: 12px
+			font-weight: 300
+			line-height: 16.8px
+			display: block
+		.green
+			color: #46b900
+			position: relative
+			&:before
+				content: "\f0d8"
+				font-family: "FontAwesome"
+				position: absolute
+				left: 78px
+				top: 0
+				font-size: 14px
+	.portal
+		color: #221f1f
+		font-size: 14px
+		font-weight: 700
+		line-height: 12.6px
+		margin-left: 20px
+	ul
+		padding: 0
+		margin: 0
+		margin-left: 20px
+		list-style-type: none
+		li a
+			color: #221f1f
+			font-size: 14px
+			font-weight: 300
+			line-height: 25.2px
+			transition: color .35s ease
+			outline: none
+			&:hover
+				color: #FDCE7C
+				text-decoration: none
+	.error
+		width: 269pxs
+		margin-left: 20px
+		margin-right: -40px
+		margin-top: 20px
+		color: #808185
+		font-size: 12px
+		font-weight: 300
+		line-height: 19.2px
+			
 
 @import "media" // Всегда в конце
